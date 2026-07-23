@@ -6,6 +6,7 @@
 id = "hmanzano/share-indicator"
 name = "Share Indicator"
 version = "0.2.0"
+plugin_api = 3
 min_noctalia = "5.0.0"
 author = "hmanzano"
 license = "MIT"
