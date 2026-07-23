@@ -1,0 +1,46 @@
+# Bar indicator for active PipeWire screen-share / portal capture sessions.
+# A headless [[service]] polls pw-dump and publishes status; the [[widget]] is a
+# thin client that hides when idle and notifies with capturer names on click.
+# Optional auto_dnd enables notification DND while sharing (ownership-aware).
+
+id = "hmanzano/share-indicator"
+name = "Share Indicator"
+version = "0.2.0"
+min_noctalia = "5.0.0"
+author = "hmanzano"
+license = "MIT"
+dependencies = ["pipewire"]
+tags = ["screen-share", "portal", "pipewire", "privacy"]
+icon = "screen-share"
+description = "Show when a PipeWire screen-share or portal capture session is active."
+
+[[setting]]
+key = "poll_ms"
+type = "int"
+label_key = "settings.poll_ms.label"
+description_key = "settings.poll_ms.description"
+default = 1000
+min = 250
+max = 10000
+
+[[setting]]
+key = "glyph"
+type = "glyph"
+label_key = "settings.glyph.label"
+description_key = "settings.glyph.description"
+default = "screen-share"
+
+[[setting]]
+key = "auto_dnd"
+type = "bool"
+label_key = "settings.auto_dnd.label"
+description_key = "settings.auto_dnd.description"
+default = false
+
+[[service]]
+id = "service"
+entry = "service.luau"
+
+[[widget]]
+id = "indicator"
+entry = "widget.luau"

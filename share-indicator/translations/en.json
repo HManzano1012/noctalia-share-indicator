@@ -1,0 +1,27 @@
+{
+  "name": "Share Indicator",
+  "notify": {
+    "sharing": "Screen share active",
+    "idle": "Not sharing",
+    "apps": "Apps: {apps}",
+    "unknown-app": "unknown"
+  },
+  "settings": {
+    "auto_dnd": {
+      "description": "Enable notification Do Not Disturb while sharing. Only turns DND off afterwards if this plugin enabled it.",
+      "label": "Auto Do Not Disturb"
+    },
+    "glyph": {
+      "description": "Glyph shown while a share session is active.",
+      "label": "Glyph"
+    },
+    "poll_ms": {
+      "description": "How often the service polls pw-dump (milliseconds).",
+      "label": "Poll interval (ms)"
+    }
+  },
+  "tooltip": {
+    "sharing": "Sharing: {apps}",
+    "idle": "Not sharing"
+  }
+}

@@ -1,0 +1,12 @@
+[[plugin]]
+id = "hmanzano/share-indicator"
+name = "Share Indicator"
+version = "0.2.0"
+author = "hmanzano"
+license = "MIT"
+icon = "screen-share"
+description = "Show when a PipeWire screen-share or portal capture session is active. Optional auto Do Not Disturb while sharing."
+deprecated = false
+min_noctalia = "5.0.0"
+tags = ["screen-share", "portal", "pipewire", "privacy"]
+dependencies = ["pipewire"]
